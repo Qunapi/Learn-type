@@ -26,5 +26,8 @@ module.exports = {
     'import/no-unresolved': 0,
     'jsx-quotes': 0,
     'import/extensions': 0,
+    'function-paren-newline': 0,
+    'react/no-array-index-key': 0,
+    'react/jsx-props-no-spreading': 0,
   },
 };
