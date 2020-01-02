@@ -1,27 +1,24 @@
 import React from 'react';
-import logo from 'assets/logo.svg';
-import 'App.css';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { Nav } from 'components/nav';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { lime, grey } from '@material-ui/core/colors';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: lime['A700'] },
+    secondary: { main: grey[50] },
+  },
+});
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
-      <CssBaseline>
+    <ThemeProvider theme={theme}>
+      <div className='App'>
         <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'>
-            Learn React
-          </a>
+          <Nav></Nav>
         </header>
-      </CssBaseline>
-    </div>
+      </div>
+    </ThemeProvider>
   );
 };
 
