@@ -1,5 +1,3 @@
 import React from 'react';
 
-export const Main = (props: never) => {
-  return <div></div>;
-};
+export const Main = (props: never) => <div />;

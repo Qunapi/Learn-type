@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     nav: {
       display: 'flex',
       flexDirection: 'row-reverse',
-      width: `100%`,
+      width: '100%',
       [theme.breakpoints.up('md')]: {
         width: theme.breakpoints.values.md,
       },
@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
     button: {
       color: theme.palette.text.primary,
     },
-  }),
-);
+  }));
 
 export const Nav = () => {
   const css = useStyles();

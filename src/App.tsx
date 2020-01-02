@@ -5,21 +5,19 @@ import { lime, grey } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: lime['A700'] },
+    primary: { main: lime.A700 },
     secondary: { main: grey[50] },
   },
 });
 
-const App: React.FC = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <div className='App'>
-        <header className='App-header'>
-          <Nav></Nav>
-        </header>
-      </div>
-    </ThemeProvider>
-  );
-};
+const App: React.FC = () => (
+  <ThemeProvider theme={theme}>
+    <div className='App'>
+      <header className='App-header'>
+        <Nav />
+      </header>
+    </div>
+  </ThemeProvider>
+);
 
 export default App;
