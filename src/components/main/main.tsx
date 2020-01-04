@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   TextField,
   createStyles,
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(10),
       maxWidth: theme.breakpoints.values.lg,
       alignSelf: 'center',
-      minHeight: 600,
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'column',
@@ -34,9 +33,15 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     wordsContainer: {
-      padding: theme.spacing(5),
+      margin: theme.spacing(5),
+      maxHeight: '5em',
       display: 'flex',
       flexWrap: 'wrap',
+      overflow: 'hidden',
+    },
+    words: {
+      lineHeight: '1.8em',
+      fontSize: '1.5em',
     },
   }),
 );
@@ -69,7 +74,7 @@ export const Main = () => {
       <Paper className={css.mainPaper}>
         <Paper className={css.input} {...rounded}>
           <div className={css.wordsContainer}>
-            <Typography>
+            <Typography className={css.words}>
               {words.map((word, i) => (
                 <span key={i}>{` ${word} `}</span>
               ))}
@@ -82,6 +87,7 @@ export const Main = () => {
             id='outlined-basic'
             label='type'
             variant='outlined'
+            autoFocus
           />
         </div>
       </Paper>

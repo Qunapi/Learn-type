@@ -29,5 +29,6 @@ module.exports = {
     'function-paren-newline': 0,
     'react/no-array-index-key': 0,
     'react/jsx-props-no-spreading': 0,
+    'no-unused-expressions': 0,
   },
 };
