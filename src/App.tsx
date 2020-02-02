@@ -3,7 +3,6 @@ import { Nav } from 'components/nav';
 import {
   ThemeProvider,
   createMuiTheme,
-  CssBaseline,
   makeStyles,
   createStyles,
   Theme,
@@ -39,10 +38,10 @@ const App: React.FC = () => {
           <Nav />
           <main className={css.main}>
             <Switch>
-              <Route path='/welcome'>
+              <Route path="/welcome">
                 <Main />
               </Route>
-              <Route path='/'>
+              <Route path="/">
                 <Main />
               </Route>
             </Switch>
